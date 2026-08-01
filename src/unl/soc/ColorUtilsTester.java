@@ -22,11 +22,13 @@ public class ColorUtilsTester {
 	}
 
 	public static void main(String args[]) {
-		
+
 		boolean reportPass = false;
-		if(args.length == 1) {
-			if(args[0].equals("-reportPass")) {
+		if (args.length == 1) {
+			if (args[0].equals("--passed")) {
 				reportPass = true;
+			} else if (args[0].equals("--failed")) {
+				reportPass = false;
 			} else {
 				System.err.println("Unrecognized CLA: " + args[0]);
 			}
@@ -190,18 +192,18 @@ public class ColorUtilsTester {
 		}
 
 		// TODO: add your test cases here
-		//   - You should write at least 1 test case for each of the
-		//     methods: min(), toGrayScaleLightness(), 
-		//     toGrayScaleLuminosity(), and toSepia()
-		//   - There should be a total of at least 18 passing
-		//     test cases
+		// - You should write at least 1 test case for each of the
+		// methods: min(), toGrayScaleLightness(),
+		// toGrayScaleLuminosity(), and toSepia()
+		// - There should be a total of at least 18 passing
+		// test cases
 
 		System.out.printf("Number Test Cases Passed: %6d\n", numPassed);
 		System.out.printf("Number Test Cases Failed: %6d\n", numFailed);
 		System.out.printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
 
-		if(reportPass) {
-			System.exit(numPassed);			
+		if (reportPass) {
+			System.exit(numPassed);
 		} else {
 			System.exit(numFailed);
 		}
