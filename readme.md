@@ -256,13 +256,9 @@ wrote for a total of 18.
 
 # Handin/Grader Instructions
 
-1.  Hand in your completed files:
+Hand in your completed files:
 
-    -   `ColorUtils.java`
+-   `ColorUtils.java`
+-   `ColorUtilsTester.java`
 
-    -   `ColorUtilsTester.java`
-
-    Be sure your program passes all tests to get credit.
-
-2.  Even if you worked with a partner, you are *both* required
-    to submit all files.
+Be sure your program passes all tests to get credit.
